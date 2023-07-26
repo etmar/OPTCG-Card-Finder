@@ -1,4 +1,4 @@
-#One Piece TCG Card Finder Discord Bot
+# One Piece TCG Card Finder Discord Bot
 Written in Python with using Discord.py. and onepiece-cardgame.dev's library of Card Data and Card Images. 
 
 To install Discord.py, use:
