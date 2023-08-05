@@ -35,7 +35,6 @@ def card_search_card_id(card_id):
 if __name__ == '__main__':
     print("loaded %2d cards" % (len(cards)))
     print(f'Bot Token {token}')
-    # May be better to init as a bot so the messages show up nice and fancy
     client = discord.Client(intents=discord.Intents.all())
 
 
@@ -46,7 +45,7 @@ if __name__ == '__main__':
 
     @client.event
     async def on_message(message):
-        # need to do string to lowercase
+        # TODO: String to lowercase for searching
 
         print(message.content)
 
@@ -58,6 +57,7 @@ if __name__ == '__main__':
                 await message.channel.send(f"No results found for `{query}`!")
             elif len(results) < 10:
                 await message.channel.send(f"%2d Results for `{query}` :" % (len(results)))
+                # TODO: Send as one message
                 for i in results:
                     await message.channel.send(i['iu'])
             else:
@@ -72,6 +72,7 @@ if __name__ == '__main__':
                 await message.channel.send(f"No results found for `{query}`!")
             elif len(results) < 10:
                 await message.channel.send(f"%2d Results for `{query}` :" % (len(results)))
+                # TODO: Send as one message
                 for i in results:
                     await message.channel.send(i['iu'])
             else:
