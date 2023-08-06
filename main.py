@@ -4,6 +4,7 @@ import discord
 cards = json.load(open("cardinventory.json"))
 # TODO: handle missing 'bot-token.txt'
 token = open('bot-token.txt').read()
+# TODO: handle empty bot-token file
 
 
 def card_search_name(card_name):
